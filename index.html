@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion & QCM</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section id="login-section">
+        <h1>Connexion Élève</h1>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required />
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required />
+          </div>
+          <button type="submit">Se connecter</button>
+        </form>
+      </section>
+
+      <section id="quiz-section" style="display: none;">
+        <h1>QCM de Mathématiques</h1>
+        <p id="welcome-message"></p>
+        <form id="quiz-form">
+          <!-- QCM 1 -->
+          <div class="question">
+            <p><strong>QCM 1 : Définition du sinus</strong><br>
+              Quelle est la définition du sinus d’un angle dans un triangle rectangle ?
+            </p>
+            <div class="options">
+              <label>
+                <input type="radio" name="q1" value="A" required> A) C’est le rapport entre le côté adjacent et l’hypoténuse
+              </label>
+              <label>
+                <input type="radio" name="q1" value="B"> B) C’est le rapport entre le côté opposé et l’hypoténuse
+              </label>
+              <label>
+                <input type="radio" name="q1" value="C"> C) C’est le rapport entre le côté opposé et le côté adjacent
+              </label>
+              <label>
+                <input type="radio" name="q1" value="D"> D) C’est l'inverse du cosinus
+              </label>
+          </div>
+          </div>
+
+          <!-- QCM 2 -->
+          <div class="question">
+            <p><strong>QCM 2 : Définition du cosinus</strong><br>
+              Quelle est la définition du cosinus d’un angle dans un triangle rectangle ?
+            </p>
+            <div class="options">
+              <label>
+                <input type="radio" name="q2" value="A" required> A) C’est le rapport entre le côté opposé et l’hypoténuse
+              </label>
+              <label>
+                <input type="radio" name="q2" value="B"> B) C’est le rapport entre le côté adjacent et l’hypoténuse
+              </label>
+              <label>
+                <input type="radio" name="q2" value="C"> C) C’est le rapport entre le côté opposé et le côté adjacent
+              </label>
+              <label>
+                <input type="radio" name="q2" value="D"> D) C’est l'inverse du sinus
+              </label>
+            </div>
+          </div>
+
+          <!-- QCM 3 -->
+          <div class="question">
+            <p><strong>QCM 3 : Valeur particulière du sinus</strong><br>
+              Quelle est la valeur de sin(90°) ?
+            </p>
+            <div class="options">
+              <label>
+                <input type="radio" name="q3" value="A" required> A) 0
+              </label>
+              <label>
+                <input type="radio" name="q3" value="B"> B) 1
+              </label>
+              <label>
+                <input type="radio" name="q3" value="C"> C) -1
+              </label>
+              <label>
+                <input type="radio" name="q3" value="D"> D) √2/2
+              </label>
+            </div>
+          </div>
+
+          <!-- QCM 4 -->
+          <div class="question">
+            <p><strong>QCM 4 : Valeur particulière du cosinus</strong><br>
+              Quelle est la valeur de cos(0°) ?
+            </p>
+            <div class="options">
+              <label>
+                <input type="radio" name="q4" value="A" required> A) 0
+              </label>
+              <label>
+                <input type="radio" name="q4" value="B"> B) 1
+              </label>
+              <label>
+                <input type="radio" name="q4" value="C"> C) -1
+              </label>
+              <label>
+                <input type="radio" name="q4" value="D"> D) √2/2
+              </label>
+            </div>
+          </div>
+
+          <!-- QCM 5 -->
+          <div class="question">
+            <p><strong>QCM 5 : Relation fondamentale sinus-cosinus</strong><br>
+              Quelle relation fondamentale lie sin²(x) et cos²(x) ?
+            </p>
+            <div class="options">
+              <label>
+                <input type="radio" name="q5" value="A" required> A) sin²(x) + cos²(x) = 1
+              </label>
+              <label>
+                <input type="radio" name="q5" value="B"> B) sin²(x) - cos²(x) = 1
+              </label>
+              <label>
+                <input type="radio" name="q5" value="C"> C) sin²(x) = cos²(x)
+              </label>
+              <label>
+                <input type="radio" name="q5" value="D"> D) sin(x) + cos(x) = 1
+              </label>
+            </div>
+          </div>
+
+          <!-- QCM 6 -->
+          <div class="question">
+            <p><strong>QCM 6 : Cosinus sur le cercle trigonométrique</strong><br>
+              Sur le cercle trigonométrique, le cosinus d’un angle correspond :
+            </p>
+            <div class="options">
+              <label>
+                <input type="radio" name="q6" value="A" required> A) À l'abscisse du point correspondant
+              </label>
+              <label>
+                <input type="radio" name="q6" value="B"> B) À l'ordonnée du point correspondant
+              </label>
+              <label>
+                <input type="radio" name="q6" value="C"> C) À la tangente du point sur le cercle
+              </label>
+              <label>
+                <input type="radio" name="q6" value="D"> D) Au rayon du cercle
+              </label>
+            </div>
+          </div>
+
+          <button type="submit">Valider le QCM</button>
+        </form>
+
+        <div id="results"></div>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
